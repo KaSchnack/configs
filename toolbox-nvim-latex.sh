@@ -10,6 +10,12 @@ gsettings set org.gnome.desktop.peripherals.touchpad disable-while-typing "false
 echo "## Downloading Cryptopass browser addon.."
 git clone https://github.com/dchest/cryptopass
 
+echo "## Updating Fedora Silverblue..."
+rpm-ostree update
+
+echo "## Installing RPM Fusion..."
+sudo rpm-ostree install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+
 echo "## Installing vim-plug..."
 curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
