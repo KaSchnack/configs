@@ -20,3 +20,5 @@ curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --c
 
 echo "## Installing personal neovim init.vim..."
 curl -fLo "${XDG_DATA_HOME:-$HOME/.config}"/nvim/init.vim --create-dirs https://raw.githubusercontent.com/KaSchnack/configs/master/init.vim
+
+echo "## Done!"
