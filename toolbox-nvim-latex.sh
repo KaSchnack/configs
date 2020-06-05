@@ -13,7 +13,7 @@ toolbox create -c work
 run="toolbox run -c work"
 
 echo "## Installing RPM dependencies inside container..."
-$run sudo dnf install -y nodejs nvim ctags python3-neovim zathura zathura-plugins-all texlive-scheme-full rubber  
+$run sudo dnf install -y nodejs neovim ctags python3-neovim zathura zathura-plugins-all texlive-scheme-full rubber  
 
 echo "## Installing vim-plug..."
 curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
